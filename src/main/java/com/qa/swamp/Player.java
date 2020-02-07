@@ -39,6 +39,11 @@ public class Player implements Moveable {
 		this.hasBounds = hasBounds;
 	}
 
+	
+	/**
+	 * Takes in a character representing the direction and changes the position of the player accordingly.
+	 * @param dir n, e, s or w
+	 */
 	public void move(char dir) {
 		switch(dir) {
 		case 'e':
@@ -60,7 +65,9 @@ public class Player implements Moveable {
 		if (hasBounds) checkBounds();
 		
 	}
-	
+	/**
+	 * Checks if the player's trying to leave the map's bounds.
+	 */
 	public void checkBounds() {
 		if (posX<0) {
 			posX = 0;
