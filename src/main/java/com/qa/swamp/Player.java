@@ -1,5 +1,6 @@
 package com.qa.swamp;
 
+import com.qa.map.Map;
 import com.qa.movement.Moveable;
 
 public class Player implements Moveable {

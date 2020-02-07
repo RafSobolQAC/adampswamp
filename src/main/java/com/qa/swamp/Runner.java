@@ -1,5 +1,7 @@
 package com.qa.swamp;
 
+import com.qa.map.MapSetUpper;
+
 public class Runner {
 	
 	public static void main(String[] args) throws InterruptedException{

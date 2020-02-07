@@ -1,4 +1,4 @@
-package com.qa.swamp;
+package com.qa.map;
 
 public class Map {
 	private int x;

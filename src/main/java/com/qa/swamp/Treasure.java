@@ -1,5 +1,7 @@
 package com.qa.swamp;
 
+import com.qa.map.Map;
+
 public class Treasure implements Interesting {
 	private int posX;
 	private int posY;

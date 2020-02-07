@@ -1,5 +1,7 @@
-package com.qa.swamp;
+package com.qa.map;
 
+import com.qa.swamp.Player;
+import com.qa.swamp.Treasure;
 import com.qa.utils.Utils;
 
 public class MapSetUpper {

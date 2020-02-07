@@ -1,5 +1,6 @@
 package com.qa.swamp;
 
+import com.qa.map.MapSetUpper;
 import com.qa.utils.DirectionSimplifier;
 import com.qa.utils.Utils;
 
@@ -7,24 +8,13 @@ public class Swamp {
 	private boolean isFinished = false;
 	private Player player;
 	private Treasure treasure;
-	private Map map;
-	private char direction;
+ 	private char direction;
 	private Compass compass;
 	
-	
-	public Swamp(Player player, Treasure treasure, Map map) {
-		this.player = player;
-		this.treasure = treasure;
-		this.map = map;
-		
-		
-		
-	}
 	
 	public Swamp(MapSetUpper mapSetup) {
 		this.player = mapSetup.getPlayer();
 		this.treasure = mapSetup.getTreasure();
-		this.map = mapSetup.getMap();
 	}
 	
 	public void begin() {
