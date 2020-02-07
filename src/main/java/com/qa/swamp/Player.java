@@ -1,5 +1,7 @@
 package com.qa.swamp;
 
+import com.qa.movement.Moveable;
+
 public class Player implements Moveable {
 
 	private int posX = 0;
@@ -29,6 +31,27 @@ public class Player implements Moveable {
 		this.posY = posY;
 	}
 
+
+	public void move(char dir) {
+		switch(dir) {
+		case 'e':
+			this.posX++;
+			break;
+		case 's':
+			this.posY--;
+			break;
+		case 'w':
+			this.posX--;
+			break;
+		case 'n':
+			this.posY++;
+			break;
+		default:
+			System.out.println("Oh whoops this should not be happening tbqh fam");
+				
+		}
+	}
+	
 	public void moveW() {
 		this.posX--;
 	}

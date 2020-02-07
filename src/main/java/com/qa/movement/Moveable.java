@@ -1,4 +1,4 @@
-package com.qa.swamp;
+package com.qa.movement;
 
 public interface Moveable {
 	public void moveW();
