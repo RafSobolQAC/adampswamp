@@ -1,7 +1,5 @@
 package com.qa.swamp;
 
-import java.util.Scanner;
-
 import com.qa.utils.DirectionSimplifier;
 import com.qa.utils.Utils;
 
@@ -10,19 +8,26 @@ public class Swamp {
 	private Player player;
 	private Treasure treasure;
 	private Map map;
-	private Scanner scanner;
 	private char direction;
 	private Compass compass;
 	
 	
-	public Swamp(Player player, Treasure treasure, Map map, Scanner scanner) throws InterruptedException {
+	public Swamp(Player player, Treasure treasure, Map map) {
 		this.player = player;
 		this.treasure = treasure;
 		this.map = map;
-		this.scanner = scanner;
 		
 		
 		
+	}
+	
+	public Swamp(MapSetUpper mapSetup) {
+		this.player = mapSetup.getPlayer();
+		this.treasure = mapSetup.getTreasure();
+		this.map = mapSetup.getMap();
+	}
+	
+	public void begin() {
 		System.out.println("You find yourself in the middle of a swamp.");
 		System.out.println("You look around, wondering if you're dreaming. Just moments ago you were sat in a warm ");
 		System.out.println("Salford office, counting down the days to your next payday in your head; now, you are ");
@@ -48,8 +53,8 @@ public class Swamp {
 		System.out.println("\'I am your ");
 		compass = new Compass(player,treasure);
 		keepGoing();
+
 	}
-	
 	public void keepGoing() {
 		while (!isFinished) {
 			setDirection();

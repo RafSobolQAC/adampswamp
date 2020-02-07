@@ -3,7 +3,6 @@ package com.qa.swamp;
 public class Treasure implements Interesting {
 	private int posX;
 	private int posY;
-	private Map map;
 	
 	public Treasure(Map map) {
 		

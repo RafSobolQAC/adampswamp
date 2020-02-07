@@ -6,7 +6,7 @@ public class Player implements Moveable {
 
 	private int posX = 0;
 	private int posY = 0;
-	private boolean isAlive = true;
+	private boolean alive = true;
 	private Map map;
 
 	public Player(Map map) {
@@ -93,5 +93,10 @@ public class Player implements Moveable {
 		this.posY--;
 
 	}
-
+	public boolean isAlive() {
+		return this.alive;
+	}
+	public void setAlive(boolean alive) {
+		this.alive = alive;
+	}
 }
