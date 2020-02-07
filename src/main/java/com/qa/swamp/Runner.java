@@ -2,6 +2,8 @@ package com.qa.swamp;
 
 import java.util.Scanner;
 
+import com.qa.utils.Utils;
+
 public class Runner {
 
 	public static void main(String[] args) throws InterruptedException{
@@ -21,9 +23,8 @@ public class Runner {
 		System.out.println(map.getX() + " by " + map.getY() + " meters!");
 		
 		System.out.println("Now it's time to get started! ");
-		System.out.println("Press any key and enter to continue.  ");
-		slowdowner = scanner.hasNext();
-		scanner.next();
+		Utils.delayer();
+		
 		Treasure treasure = new Treasure(map);
 		Player player = new Player(map);
 		

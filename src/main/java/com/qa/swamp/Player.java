@@ -7,8 +7,10 @@ public class Player implements Moveable {
 	private int posX = 0;
 	private int posY = 0;
 	private boolean isAlive = true;
+	private Map map;
 
 	public Player(Map map) {
+		this.map = map;
 		posX = (int) (map.getX()/2);
 		posY = (int) (map.getY()/2);
 		System.out.println("Hello! I'm the player!");
@@ -47,8 +49,29 @@ public class Player implements Moveable {
 			this.posY++;
 			break;
 		default:
-			System.out.println("Oh whoops this should not be happening tbqh fam");
+			System.out.println("Oh whoops this should not be happening");
 				
+		}
+		checkBounds();
+		
+	}
+	
+	public void checkBounds() {
+		if (posX<0) {
+			posX = 0;
+			System.out.println("Some magical force prevents you from moving west.");
+		}
+		if (posY < 0) {
+			posY = 0;
+			System.out.println("Some magical force prevents you from moving south.");
+		}
+		if (posX > map.getX()) {
+			posX = map.getX();
+			System.out.println("Some magical force prevents you from moving east.");
+		}
+		if (posY > map.getY()) {
+			posY = map.getY();
+			System.out.println("Some magical force prevents you from moving north.");
 		}
 	}
 	

@@ -3,10 +3,9 @@ package com.qa.swamp;
 import java.util.Scanner;
 
 import com.qa.utils.DirectionSimplifier;
-import com.qa.utils.GetInput;
+import com.qa.utils.Utils;
 
 public class Swamp {
-	private boolean slowdowner;
 	private boolean isFinished = false;
 	private Player player;
 	private Treasure treasure;
@@ -32,15 +31,14 @@ public class Swamp {
 		System.out.println("this lovely little mudbath; indeed, you are rather busy being extremely confused at what");
 		System.out.println("in the hell is going on. ");
 		
-		System.out.println("\n\n (Press any key and enter to continue.) ");
-		slowdowner = scanner.hasNext();
-		scanner.next();
+		System.out.println("\n\n");
+
+		Utils.delayer();
 		System.out.println("You pull your phone out of the left-front pocket of your jeans. You look down at it, and ");
 		System.out.println("you unlock the-");
 		System.out.println("Hold on, this isn't your phone.");
-		System.out.println("\n\n\n\n\n (Press any key and enter to continue.) ");
-		slowdowner = scanner.hasNext();
-		scanner.next();
+		System.out.println("\n\n\n\n\n");
+		Utils.delayer();
 		
 		System.out.println("\'Hello!\'");
 		System.out.println("The little creature in your pocket exclaims, seemingly unbothered by the fact it just got");
@@ -78,7 +76,7 @@ public class Swamp {
 		while (this.direction == ' ') {
 			System.out.println("Please pick direction: (N)orth, (E)ast, (S)outh or (W)est. ");
 
-			input = GetInput.getInput();
+			input = Utils.getInput();
 			
 			
 			
