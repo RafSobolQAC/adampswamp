@@ -7,7 +7,12 @@ public class Monster {
 	private boolean alive = true;
 	private int hp = 10;
 	private int[] position = new int[2];
-	
+	/**
+	 * Unused at the moment.
+	 * @param posX X-position of the monster
+	 * @param posY Y-position of the monster
+	 * @param hp Monster's health points
+	 */
 	public Monster(int posX, int posY, int hp) {
 		this.posX = posX;
 		this.posY = posY;

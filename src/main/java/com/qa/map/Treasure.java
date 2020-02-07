@@ -10,8 +10,6 @@ public class Treasure implements Interesting {
 		
 		posX = Utils.getRandom(map.getX());
 		posY = Utils.getRandom(map.getY());
-		
-		System.out.println("Hello, I am the treasure! I am located on "+posX+" by "+posY+".");
 	}
 	
 	public void setPosX(int posX) {

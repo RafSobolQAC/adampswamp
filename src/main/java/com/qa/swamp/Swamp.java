@@ -13,12 +13,17 @@ public class Swamp {
  	private char direction;
 	private Compass compass;
 	
-	
+	/**
+	 * Creates the swamp.
+	 * @param mapSetup the MapSetUpper object.
+	 */
 	public Swamp(MapSetUpper mapSetup) {
 		this.player = mapSetup.getPlayer();
 		this.treasure = mapSetup.getTreasure();
 	}
-	
+	/**
+	 * Initial method called by the Runner.
+	 */
 	public void begin() {
 		System.out.println("You find yourself in the middle of a swamp.");
 		System.out.println("You look around, wondering if you're dreaming. Just moments ago you were sat in a warm ");
@@ -49,6 +54,11 @@ public class Swamp {
 		keepGoing();
 
 	}
+	
+	/**
+	 * Main method responsible for running the game.
+	 * Orchestrates the other methods.
+	 */
 	public void keepGoing() {
 		while (!isFinished) {
 			setDirection();
@@ -57,7 +67,10 @@ public class Swamp {
 			if (compass.isOnTreasure()) foundTreasure();
 		}
 	}
-	
+	/**
+	 * Currently unused.
+	 * Will allow for player to do actions other than moving.
+	 */
 	public void getOrder() {
 		System.out.println("What would you like to do? ");
 		System.out.println("(M)ove (I)nventory (Q)uit");

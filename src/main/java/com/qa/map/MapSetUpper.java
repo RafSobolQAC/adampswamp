@@ -1,8 +1,5 @@
 package com.qa.map;
 
-import java.util.ArrayList;
-
-import com.qa.enemies.Monster;
 import com.qa.swamp.Player;
 import com.qa.utils.Utils;
 import com.qa.utils.YNSimplifier;
@@ -12,8 +9,6 @@ public class MapSetUpper {
 	private Map map = new Map();
 	private Treasure treasure;
 	private Player player;
-	private int noOfMonsters;
-	private ArrayList<Monster> monsterList;
 	/**
 	 * Creates a MapSetUpper instance.
 	 */
@@ -24,7 +19,7 @@ public class MapSetUpper {
 	
 	/**
 	 * This will set up a map on which the game can be played.
-	 * 
+	 * Takes in user input from the console.
 	 * 
 	 */
 	public void setUpMap() {
@@ -64,19 +59,11 @@ public class MapSetUpper {
 		
 		System.out.println("Now it's time to get started! ");
 		
-		noOfMonsters = (int) map.getX()*map.getY()/10;
 		this.treasure = new Treasure(this.map);
 		this.player = new Player(this.map);
 		if (yn == 'y') player.setHasBounds(true);
 		else player.setHasBounds(false);
 		
-		try {
-			for (int i = 0; i < noOfMonsters; i++) {
-				monsterList.add(new Monster(1,1,1));
-			}
-		} catch (NullPointerException e) {
-			System.out.println(e.getLocalizedMessage());
-		}
 		Utils.delayer();
 
 	}

@@ -10,13 +10,14 @@ public class Player implements Moveable {
 	private boolean alive = true;
 	private Map map;
 	private boolean hasBounds = true;
-	
+	/**
+	 * That's you!
+	 * @param map Checks bounds and places player in the middle.
+	 */
 	public Player(Map map) {
 		this.map = map;
 		posX = (int) (map.getX()/2);
 		posY = (int) (map.getY()/2);
-		System.out.println("Hello! I'm the player!");
-		System.out.println("I was spawned on X "+posX+" by Y "+posY+"!");
 	}
 
 	public int getPosX() {
