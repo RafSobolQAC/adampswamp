@@ -1,4 +1,4 @@
-package com.qa.swamp;
+package com.qa.map;
 
 public interface Interesting {
 	public int getPosX();

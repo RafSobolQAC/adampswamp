@@ -1,4 +1,7 @@
-package com.qa.swamp;
+package com.qa.pda;
+
+import com.qa.map.Treasure;
+import com.qa.swamp.Player;
 
 public class Compass {
 	
@@ -10,7 +13,8 @@ public class Compass {
 	 */
 	public Compass(Player player, Treasure treasure) {
 		this.distance = Math.pow(Math.pow(treasure.getPosX()-player.getPosX(),2) + Math.pow(treasure.getPosY() - player.getPosY(), 2),0.5);
-		System.out.println("The compass reads "+this.distance+" meters");
+		System.out.println("Your PDA shouts: 'Keep going! You're only "+this.distance+" meters away!'");
+		System.out.println();
 	}
 	public boolean isOnTreasure() {
 		if (distance == 0.0) {

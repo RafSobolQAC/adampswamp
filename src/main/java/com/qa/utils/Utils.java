@@ -14,4 +14,7 @@ public class Utils {
 		System.out.println("(Press enter to continue.)");
 		scanner.nextLine();
 	}
+	public static int getRandom(int max) {
+		return (int) ((int) max*Math.random());
+	}
 }

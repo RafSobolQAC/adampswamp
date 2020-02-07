@@ -3,7 +3,11 @@ package com.qa.map;
 public class Map {
 	private int x;
 	private int y;
-	
+	/**
+	 * Sets up a new Map instance.
+	 * @param x width
+	 * @param y height
+	 */
 	public Map(int x, int y) {
 		this.x = x;
 		this.y = y;

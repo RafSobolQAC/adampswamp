@@ -1,6 +1,8 @@
 package com.qa.swamp;
 
 import com.qa.map.MapSetUpper;
+import com.qa.map.Treasure;
+import com.qa.pda.Compass;
 import com.qa.utils.DirectionSimplifier;
 import com.qa.utils.Utils;
 
@@ -26,13 +28,13 @@ public class Swamp {
 		System.out.println("this lovely little mudbath; indeed, you are rather busy being extremely confused at what");
 		System.out.println("in the hell is going on. ");
 		
-		System.out.println("\n\n");
+		System.out.println("\n");
 
 		Utils.delayer();
 		System.out.println("You pull your phone out of the left-front pocket of your jeans. You look down at it, and ");
 		System.out.println("you unlock the-");
 		System.out.println("Hold on, this isn't your phone.");
-		System.out.println("\n\n\n\n\n");
+		System.out.println("\n");
 		Utils.delayer();
 		
 		System.out.println("\'Hello!\'");
@@ -40,7 +42,9 @@ public class Swamp {
 		System.out.println("pulled out of a stranger's pocket.");
 		System.out.println("It appears to be something akin to a squirrel, if a squirrel were put through a hydraulic");
 		System.out.println("press. It's approximately rectangular when you look at it from the front");
-		System.out.println("\'I am your ");
+		System.out.println("'I am your Portable Damp-area Assistant! Just call me PDA for short.'");
+		System.out.println("Here, your PDA trailed off, as the game developer's imagination has dried out.");
+		System.out.println("And thus, you set off on your epic adventure of finding the treasure!");
 		compass = new Compass(player,treasure);
 		keepGoing();
 
@@ -55,13 +59,16 @@ public class Swamp {
 	}
 	
 	public void getOrder() {
-		System.out.println("Which way would you like to move? ");
+		System.out.println("What would you like to do? ");
+		System.out.println("(M)ove (I)nventory (Q)uit");
 		
 	}
 	
 	public void foundTreasure() {
 		System.out.println("You found the treasure!");
 		System.out.println("Well done.");
+		System.out.println("You should be very proud of yourself!");
+		System.out.println("Your skills at typing out letters are truly remarkable.");
 		isFinished = true;
 	}
 	

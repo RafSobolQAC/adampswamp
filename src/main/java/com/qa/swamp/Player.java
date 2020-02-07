@@ -9,7 +9,8 @@ public class Player implements Moveable {
 	private int posY = 0;
 	private boolean alive = true;
 	private Map map;
-
+	private boolean hasBounds = true;
+	
 	public Player(Map map) {
 		this.map = map;
 		posX = (int) (map.getX()/2);
@@ -33,7 +34,9 @@ public class Player implements Moveable {
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
-
+	public void setHasBounds(boolean hasBounds) {
+		this.hasBounds = hasBounds;
+	}
 
 	public void move(char dir) {
 		switch(dir) {
@@ -53,7 +56,7 @@ public class Player implements Moveable {
 			System.out.println("Oh whoops this should not be happening");
 				
 		}
-		checkBounds();
+		if (hasBounds) checkBounds();
 		
 	}
 	

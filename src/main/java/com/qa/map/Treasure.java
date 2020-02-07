@@ -1,6 +1,6 @@
-package com.qa.swamp;
+package com.qa.map;
 
-import com.qa.map.Map;
+import com.qa.utils.Utils;
 
 public class Treasure implements Interesting {
 	private int posX;
@@ -8,8 +8,8 @@ public class Treasure implements Interesting {
 	
 	public Treasure(Map map) {
 		
-		posX = (int) ((int) map.getX()*Math.random());
-		posY = (int) ((int) map.getY()*Math.random());
+		posX = Utils.getRandom(map.getX());
+		posY = Utils.getRandom(map.getY());
 		
 		System.out.println("Hello, I am the treasure! I am located on "+posX+" by "+posY+".");
 	}
